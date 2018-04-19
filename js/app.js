@@ -120,18 +120,18 @@ var addCardListener = function () {
 
 		if (opened.length > 1) {
 			if (card === opened[0]) {
-				$deck.find('.open').addClass('match animated infinite rubberBand');
+				$deck.find('.open').addClass('match animated infinite jello');
 				setTimeout(function () {
-					$deck.find('.match').removeClass('open show animated infinite rubberBand');
+					$deck.find('.match').removeClass('open show animated infinite jello');
 				}, delay);
 				match++;
 			} else {
-				$deck.find('.open').addClass('notmatch animated infinite wobble');
+				$deck.find('.open').addClass('notmatch animated infinite flash');
 				setTimeout(function () {
-					$deck.find('.open').removeClass('animated infinite wobble');
+					$deck.find('.open').removeClass('animated infinite flash');
 				}, delay / 1.5);
 				setTimeout(function () {
-					$deck.find('.open').removeClass('open show notmatch animated infinite wobble');
+					$deck.find('.open').removeClass('open show notmatch animated infinite flash');
 				}, delay);
 			}
 			opened = [];
