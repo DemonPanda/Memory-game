@@ -1,3 +1,4 @@
+// Variables
 let symbols = ['diamond', 'diamond', 'car', 'car', 'camera', 'camera', 'rocket', 'rocket', 'money', 'money', 'space-shuttle', 'space-shuttle', 'bomb', 'bomb', 'bicycle', 'bicycle'],
 	opened = [],
 	match = 0,
@@ -16,7 +17,7 @@ let symbols = ['diamond', 'diamond', 'car', 'car', 'camera', 'camera', 'rocket',
 	$restart = $('.restart'),
 	$timer = $('.timer');
 
-
+// Deck shuffle
 function shuffle(array) {
 	var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -31,6 +32,7 @@ function shuffle(array) {
 	return array;
 }
 
+// Game initial
 function initGame() {
 	var cards = shuffle(symbols);
 	$deck.empty();
@@ -49,7 +51,7 @@ function initGame() {
 	initTime();
 };
 
-
+// Final score
 function setRating(moves) {
 	var rating = 3;
 	if (moves > threestars && moves < twostar) {
@@ -65,9 +67,11 @@ function setRating(moves) {
 	return { score: rating };
 };
 
+// Finalising game
 function endGame(moves, score) {
 	swal({
   title: 'Sweet! You did it!',
+	text: 'With ' + moves + ' Moves and ' + score + ' Stars in ' + second + ' Seconds!',
   imageUrl: 'img/nyan-cat.gif',
   imageWidth: 400,
   imageHeight: 200,
@@ -83,6 +87,7 @@ function endGame(moves, score) {
 	})
 }
 
+// Game restart button
 $restart.bind('click', function () {
 	swal({
 		allowEscapeKey: false,
@@ -107,6 +112,7 @@ $restart.bind('click', function () {
 	})
 });
 
+// Card flipping and comparing
 var addCardListener = function () {
 
 	$deck.find('.card').bind('click', function () {
@@ -150,7 +156,7 @@ var addCardListener = function () {
 	});
 };
 
-
+// Timer
 function initTime() {
 	currentTimer = setInterval(function () {
 		$timer.text(`${second}`)
