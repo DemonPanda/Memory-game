@@ -1,8 +1,16 @@
-# Memory game | Udacity nanodegree project
+**MEMORY GAME | UDACITY NANODEGREE PROJECT**
 
-Simple game with simple rules!
+Classic Memory Game
 
-Just click on grey card to flip it and find two matching cards.
-Game should be finished with as less as possible moves.
+**How to play**
 
-Good luck!
+> To start playing click [PLAY](http://www.demonpanda.com/memory).
+> Click on cards to open them and see what`s under it.
+> Aim of the game is to match same cards with as less moves as possible.
+
+**External libraries Used**
+
+> [Sweet alert 2](https://sweetalert2.github.io/)
+> jQuery
+> [AnimateCss](https://daneden.github.io/animate.css/)
+> [Pictures](https://www.vecteezy.com)
